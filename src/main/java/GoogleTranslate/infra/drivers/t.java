@@ -11,11 +11,11 @@ public class t {
 
 
             ScannerInputTest scannerInputTest = new ScannerInputTest();
-            scannerInputTest.scan();
+            scannerInputTest.scanning();
             scannerInputTest.setUpDriver();
-            scannerInputTest.FromFile();
-//            scannerInputTest.translate();
-//            scannerInputTest.close();
+          //  scannerInputTest.FromFile();
+            scannerInputTest.translate();
+          //  scannerInputTest.close();
 
 
 

@@ -12,7 +12,7 @@ public class FireFoxDriverManager extends WebDriverManager {
 
         System.setProperty("webdriver.gecko.driver","C:\\Selenium\\f\\geckodriver.exe");
 
-        driver = new FirefoxDriver();
+
 
         return driver;
     }

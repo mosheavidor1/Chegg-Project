@@ -13,7 +13,7 @@ public class ChromeDriverManager extends WebDriverManager {
         System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\New folder\\chromedriver.exe");
 
 
-        driver = new ChromeDriver();
+
 
         return driver;
     }
