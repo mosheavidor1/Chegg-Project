@@ -18,6 +18,8 @@
             <artifactId>selenium-java</artifactId>
             <version>4.4.0</version>
         </dependency>
+
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -25,21 +27,6 @@
             <scope>compile</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.6</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>2.0.6</version>
-            <scope>test</scope>
-        </dependency>
 
 
 
@@ -68,6 +55,8 @@
         </dependency>
 
     </dependencies>
+
+
 
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
