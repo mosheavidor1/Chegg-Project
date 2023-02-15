@@ -1,55 +1,35 @@
 package GoogleTranslate.run.main_run;
 
 import GoogleTranslate.test.tesng_page.TranslateInputTest;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class RunTranslateInput {
+import static GoogleTranslate.infra.seleniume_driver_properties.extent_reports_path.EXTENT_PATH;
+
+public class RunTranslateInput{
 
 
-    public static void main(String[] args) throws InterruptedException, IOException {
+        public static void main(String[] args) throws IOException, InterruptedException {
+            ExtentReports extent = new ExtentReports();
+            ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(EXTENT_PATH);
+            extent.attachReporter(htmlReporter);
 
-        //In this test I'm typing a text (using scanner class) and send it via Selenium TestNG to Google Translate and getting in  return
-//the output of the text and also verifying that the language detection works as expected.
+            ExtentTest test = extent.createTest("Translate Input Test");
 
-        TranslateInputTest translateInputTest = new TranslateInputTest();
-        translateInputTest.typing();
-        translateInputTest.setUpDriver();
-        translateInputTest.translateInput();
-
-
-    }
-
+            try {
+                TranslateInputTest translateInputTest = new TranslateInputTest();
+                translateInputTest.typing();
+                translateInputTest.setUpDriver();
+                translateInputTest.translateInput();
+                test.pass("Test Passed");
+            } catch (Exception e) {
+                test.fail(e);
+                test.fail("Test fail");
+            } finally {
+                extent.flush();
+            }
+        }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-//
-////    public static void main(String[] args) {
-////
-////
-//////            TranslateEnteredText scannerInputTest = new TranslateEnteredText();
-//////            scannerInputTest.scanning();
-//////            scannerInputTest.setUpDriver();
-//////            //  scannerInputTest.FromFile();
-//////            scannerInputTest.translate();
-//////            //  scannerInputTest.close();
-//////
-//////
-//////
-//////
-//////        }
-//////    }
-//////
-//////
-////

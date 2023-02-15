@@ -36,8 +36,9 @@ public class TranslateInput {
             TextActions.GetText(driver);
 
             // Add an assertion to check if the translated text is not empty
-        //   String translatedText = TextActions.GetText(driver);
-          //  Assert.assertNotEquals("", translatedText.trim());
+            String translatedText = TextActions.GetText(driver);
+            Assert.assertNotEquals("", translatedText.trim());
+
 
         } catch (Exception e) {
             // If there's an exception, log the error message and take a screenshot

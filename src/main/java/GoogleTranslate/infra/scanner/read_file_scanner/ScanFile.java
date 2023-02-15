@@ -4,11 +4,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import static GoogleTranslate.infra.scanner.read_file_scanner.ReadFilePath.HEBREW_FILE;
+
 public class ScanFile {
 
     public static String getScannedFile() throws FileNotFoundException {
 
-        File file = new File("C:\\Users\\Moshe.Avidor\\Desktop\\testing.txt");
+        File file = new File(HEBREW_FILE);
         Scanner sc = new Scanner(file);
 
         String text = sc.nextLine();

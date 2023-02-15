@@ -14,6 +14,7 @@ public class ScannerInput {
                 inputValue = scanner.nextLine();
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
+                scanner.close();
             }
             return inputValue;
         }

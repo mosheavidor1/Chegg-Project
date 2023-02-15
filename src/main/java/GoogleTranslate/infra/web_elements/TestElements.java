@@ -22,6 +22,13 @@ public  static  final  String PRINT_TEXT="//span[@class='ryNqvb']";
 //Detect the Hebrew language
 public  static  final  String HEBREW_DETECT_ELEMENT="//span[normalize-space()='Hebrew - detected']";
 
+//Make sure the translation is correct - text  .
+public  static  final  String TRANSLATION_CHECK_TEXT="I am an automation engineer";
+
+//Make sure the translation is correct - element  .
+public  static  final  String TRANSLATION_CHECK="//span[normalize-space()='I am an automation engineer']";
+
+
 //For Hebrew detection verification
 public  static  final  String HEBREW_DETECT="HEBREW - DETECTED";
 
