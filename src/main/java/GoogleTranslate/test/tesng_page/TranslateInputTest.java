@@ -1,8 +1,8 @@
-package GoogleTranslate.tests.tesng_page;
+package GoogleTranslate.test.tesng_page;
 
 import GoogleTranslate.infra.scanner.ScannerInput;
 import GoogleTranslate.infra.seleniume_driver_properties.driver_functionality.SelectDriver;
-import GoogleTranslate.tests.TranslateInput;
+import GoogleTranslate.test.tesng_page.test_actions.TranslateInput;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 
 //In this test I will check if typed text  will be translated and if language will be detected .
@@ -50,7 +51,7 @@ public class TranslateInputTest {
     @Step
 
 
-    public void translateInput() throws InterruptedException {
+    public void translateInput() throws InterruptedException, IOException {
 
         TranslateInput translateInput = new TranslateInput();
         translateInput.Type(driver, inputValue);

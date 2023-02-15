@@ -1,4 +1,4 @@
-package GoogleTranslate.tests.tesng_page;
+package GoogleTranslate.test.tesng_page.test_actions;
 
 import GoogleTranslate.infra.scanner.TextActions;
 import GoogleTranslate.infra.web_elements.WaitForElement;

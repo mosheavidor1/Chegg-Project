@@ -1,7 +1,8 @@
-package GoogleTranslate.tests.tesng_page;
+package GoogleTranslate.test.tesng_page;
 
 import GoogleTranslate.infra.scanner.read_file_scanner.ScanFile;
 import GoogleTranslate.infra.seleniume_driver_properties.driver_functionality.SelectDriver;
+import GoogleTranslate.test.tesng_page.test_actions.TranslateFromFile;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;

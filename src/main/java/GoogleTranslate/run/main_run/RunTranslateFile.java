@@ -1,6 +1,6 @@
 package GoogleTranslate.run.main_run;
 
-import GoogleTranslate.tests.tesng_page.TranslateFromFileTest;
+import GoogleTranslate.test.tesng_page.TranslateFromFileTest;
 
 import java.io.FileNotFoundException;
 
