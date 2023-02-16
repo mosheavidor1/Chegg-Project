@@ -45,7 +45,7 @@ public class TranslateInputTest {
 
 
     //In this test the typed word will be sent to google translate, and after it is translated it will print in the consul the translated
-    //word and also will print if the language detection works as expected(true /false).
+
     @Test()
     //Steps for Allure reports
     @Step

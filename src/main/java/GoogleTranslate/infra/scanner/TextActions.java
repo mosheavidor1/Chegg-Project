@@ -42,7 +42,7 @@ public class TextActions {
             System.out.println("Translated text: " + translatedText);
 
             //Detect if the tested language is being detected automatically by Google Translate
-          //  detectLanguage(driver,language);
+         //detectLanguage(SupportedLanguage.DUTCH);
 
         } catch (Exception e) {
             // If there's an exception, log the error message and take a screenshot
@@ -63,7 +63,8 @@ public class TextActions {
 
     //Verify Detected language :
 
-    public static String detectLanguage(WebDriver driver, SupportedLanguage language) {
+ public static String detectLanguage(SupportedLanguage language) {
+
 
         Logger logger = Logger.getLogger(TextActions.class.getName());
         WaitForElement wait = new WaitForElement(driver, 30);
@@ -90,43 +91,6 @@ public class TextActions {
 
 
 
-
-//    public static String detectLanguage(WebDriver driver) {
-//        //Detect the tested language
-//        Logger logger = Logger.getLogger(TextActions.class.getName());
-//        WaitForElement wait = new WaitForElement(driver, 30);
-//
-//        String detectedLanguage = "";
-//        WebElement languageToDetect = null;
-//        try {
-//            wait.waitForElement(By.xpath(HEBREW_DETECT_ELEMENT));
-//            languageToDetect = driver.findElement(By.xpath(HEBREW_DETECT_ELEMENT));
-//            detectedLanguage = languageToDetect.getText();
-//        } catch (NoSuchElementException e) {
-//            System.out.println("Element not found: " + e.getMessage());
-//        }
-//
-//        String expectedLanguage = "HEBREW - DETECTED";
-//        try {
-//            assertEquals(detectedLanguage, expectedLanguage);
-//        } catch (AssertionError e) {
-//            System.out.println("Detected language does not match expected language: " + e.getMessage());
-//        }
-//
-//
-//
-//        //Add a log message to track the detected language
-//        logger.info("Detected language: " + detectedLanguage);
-//        System.out.println("Detected language: " + detectedLanguage);
-//
-//
-//        //Verifying the language detection of Google Translate works as expected
-//        Assert.assertEquals(HEBREW_DETECT, languageToDetect.getText());
-//
-//        return detectedLanguage;
-//    }
-//
-//
 
 
 //Verify translated text is correct:

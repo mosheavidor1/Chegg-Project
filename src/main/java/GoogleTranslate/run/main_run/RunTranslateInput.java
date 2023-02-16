@@ -10,6 +10,8 @@ import java.io.IOException;
 import static GoogleTranslate.infra.seleniume_driver_properties.extent_reports_path.EXTENT_PATH;
 
 public class RunTranslateInput{
+//In this test the typed word will be sent to google translate, and after it is translated it will print in the consul the translated
+
 
 
         public static void main(String[] args) throws IOException, InterruptedException {
