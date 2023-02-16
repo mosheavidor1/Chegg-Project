@@ -5,6 +5,7 @@ import GoogleTranslate.infra.seleniume_driver_properties.driver_functionality.Se
 import GoogleTranslate.test.tesng_page.test_actions.TranslateInput;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -29,7 +30,6 @@ public class TranslateInputTest {
     public void typing() throws FileNotFoundException {
 
         inputValue = ScannerInput.getInputFromScanner();
-
 
 
     }
@@ -59,4 +59,12 @@ public class TranslateInputTest {
 
     }
 
+    @AfterSuite
+    public void tearDown() throws InterruptedException {
+
+        Thread.sleep(4000);
+        driver.quit();
+
+
+    }
 }

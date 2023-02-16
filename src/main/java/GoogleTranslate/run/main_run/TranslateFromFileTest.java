@@ -6,6 +6,7 @@ import GoogleTranslate.test.tesng_page.test_actions.TranslateFromFile;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -128,17 +129,24 @@ public void ReadFromFile_French() throws InterruptedException, FileNotFoundExcep
 
 
 public void ReadFromFile_Hebrew() throws InterruptedException, FileNotFoundException {
-        TranslateFromFile translateFromFile=new TranslateFromFile();
-  translateFromFile.Read(driver,FileRead= ScanFile.getScannedFile(LanguageFilePath.DUTCH));
+    TranslateFromFile translateFromFile = new TranslateFromFile();
+    translateFromFile.Read(driver, FileRead = ScanFile.getScannedFile(LanguageFilePath.DUTCH));
+
+
+}
+
+    @AfterSuite
+    public void tearDown() {
+
+
+        driver.quit();
+    }
+}
 
 
 
 
 
-
-        }
-
-        }
 
 
 

@@ -4,6 +4,7 @@ import GoogleTranslate.test.tesng_page.TranslateInputTest;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import org.testng.annotations.AfterSuite;
 
 import java.io.IOException;
 
@@ -26,6 +27,9 @@ public class RunTranslateInput{
                 translateInputTest.typing();
                 translateInputTest.setUpDriver();
                 translateInputTest.translateInput();
+                translateInputTest.tearDown();
+
+
                 test.pass("Test Passed");
             } catch (Exception e) {
                 test.fail(e);
@@ -35,3 +39,4 @@ public class RunTranslateInput{
             }
         }
 }
+
