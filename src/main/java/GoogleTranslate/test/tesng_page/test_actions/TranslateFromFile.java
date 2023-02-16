@@ -2,11 +2,11 @@ package GoogleTranslate.test.tesng_page.test_actions;
 
 import GoogleTranslate.infra.scanner.TextActions;
 import GoogleTranslate.infra.web_elements.WaitForElement;
+import GoogleTranslate.infra.web_elements.languages.SupportedLanguage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static GoogleTranslate.infra.web_elements.TestElements.GOOGLE_TRANSLATE_URL;
-import static GoogleTranslate.infra.web_elements.TestElements.SOURCE_LANGUAGE;
+import static GoogleTranslate.infra.web_elements.languages.LanguageElements.*;
 
 
 public class TranslateFromFile {
@@ -29,6 +29,7 @@ public class TranslateFromFile {
 
         //This function will print the Translated text from Google Translate and will verify language detection works(true/false)
         TextActions.GetText(driver);
+
 
 
 

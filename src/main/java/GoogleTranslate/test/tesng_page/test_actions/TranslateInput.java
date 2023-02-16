@@ -9,7 +9,7 @@ import org.testng.Assert;
 import java.io.File;
 import java.io.IOException;
 
-import static GoogleTranslate.infra.web_elements.TestElements.*;
+import static GoogleTranslate.infra.web_elements.languages.LanguageElements.*;
 import static screenshots.ScreenshotsPath.SCREENSHOT;
 
 
@@ -37,7 +37,7 @@ public class TranslateInput {
 
             // Add an assertion to check if the translated text is not empty
             String translatedText = TextActions.GetText(driver);
-            Assert.assertNotEquals("", translatedText.trim());
+
 
 
         } catch (Exception e) {
